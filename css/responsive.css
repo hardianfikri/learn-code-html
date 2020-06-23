@@ -1,0 +1,125 @@
+li {
+  list-style: none;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+.clear {
+  clear:both;
+}
+
+@media all and  (max-width:1000px) {
+  .main-image {
+    object-fit: contain;
+    width: calc(70vw - 16em);
+    height: calc(70vw - 16em);
+    animation: floating 3s ease-out infinite;
+  }
+  .main-context {
+    margin-top :-5em;
+    text-align: center;
+  }
+  .top-image {
+    position: relative;
+    text-align: center;
+    margin: 5em 5em;
+  }
+  .icon-wrapper {
+    object-fit: contain;
+    width: 9.5em;
+    height: 9.5em;
+    margin: 0 0px;
+  }
+  .lesson:active > .icon-wrapper {
+      display: inline-block;
+      width: 9.4em;
+      height: 9.4em;
+      transition: all 0.2s linear ;
+      border: 2px solid red transparent;
+      opacity:0;
+  }
+  .review-fade {
+    margin: 0 40px 0 0;
+  }
+}
+
+
+@media all and  (max-width:670px) {
+  .main-image {
+    object-fit: contain;
+    width: calc(75vw - 16em);
+    height: calc(75vw - 16em);
+    animation: floating 3s ease-out infinite;
+  }
+  .main-context {
+    margin-top :-5em;
+  }
+  .top-image {
+    position: relative;
+    text-align: center;
+    margin: 5em 5em;
+  }
+  .main-context > h1 {
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+  }
+  .main-context > h3 {
+    margin: 2em 0;
+    text-align: center;
+  }
+
+  .lesson {
+    display: block;
+    margin: 0.2em;
+  }
+  .icon-wrapper {
+    object-fit: contain;
+    width: 9.5em;
+    height: 9.5em;
+    margin: 0 0px;
+  }
+
+  .lesson:active > .click-info , .menu-lesson,{
+  display: none;
+  }
+  .lesson:hover > .click-info {
+    display: none;
+  }
+  .lesson:active > .icon-wrapper {
+      display: inline-block;
+      width: 9.4em;
+      height: 9.4em;
+      transition: all 0.2s linear ;
+      opacity:0;
+  }
+  .lesson:active > .dropdown-2 {
+    padding: 0;
+    display: block;
+    transform: translateX(0vw) translateY(-25vh);
+    width:10em;
+  }
+
+  .review-fade {
+    font-size: 10%;
+    text-align: left;
+    padding: 0 20px;
+  }
+  .review-1 ,.review-2, .review-3 {
+    position: absolute; /*agar semua di posisi sama*/
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top:20vh;
+    margin-left:-25vw;
+  }
+  .review-fade p {
+    margin-top:65vh;
+    font-size: 12px;
+    font-weight: 200;
+  }
+
+}
